@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS payment_status (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  student_id INT NOT NULL,
+  grade_id INT NULL,
+  class_id INT NULL,
+  period_type ENUM('Monthly','Term') NOT NULL,
+  period_label VARCHAR(50) NOT NULL,
+  amount_due DECIMAL(10,2) NOT NULL DEFAULT 0,
+  amount_paid DECIMAL(10,2) NOT NULL DEFAULT 0,
+  balance DECIMAL(10,2) NOT NULL DEFAULT 0,
+  status ENUM('Paid','Partial','Unpaid') NOT NULL DEFAULT 'Unpaid',
+  record_date DATE NOT NULL DEFAULT (CURRENT_DATE),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  KEY student_id (student_id),
+  KEY grade_id (grade_id),
+  KEY class_id (class_id),
+  CONSTRAINT fk_payment_status_student FOREIGN KEY (student_id) REFERENCES students (id) ON DELETE CASCADE,
+  CONSTRAINT fk_payment_status_grade FOREIGN KEY (grade_id) REFERENCES grades (id) ON DELETE SET NULL,
+  CONSTRAINT fk_payment_status_class FOREIGN KEY (class_id) REFERENCES classes (id) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

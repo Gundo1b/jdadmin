@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="css/student_registration.css" />
+</head>
+<body>
+
+  <h1>Student Registration</h1>
+
+  <form id="registrationForm" action="process_registration.php" method="POST" enctype="multipart/form-data">
+
+    <h2>Student / Learner Details</h2>
+    <label for="studentName">Name</label>
+    <input type="text" id="studentName" name="studentName" required />
+
+    <label for="studentSurname">Surname</label>
+    <input type="text" id="studentSurname" name="studentSurname" required />
+
+    <label>Gender</label>
+    <div class="gender-group">
+      <label><input type="radio" name="gender" value="Male" required /> Male</label>
+      <label><input type="radio" name="gender" value="Female" /> Female</label>
+      <label><input type="radio" name="gender" value="Other" /> Other</label>
+    </div>
+
+    <label for="dob">Date of Birth (yyyy/mm/dd)</label>
+    <input type="date" id="dob" name="dob" required />
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" pattern="^\+?\d{7,15}$" placeholder="+1234567890" required />
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="physicalAddress">Physical Address</label>
+    <textarea id="physicalAddress" name="physicalAddress" rows="2" required></textarea>
+
+    <label for="homeLanguage">Home Language</label>
+    <input type="text" id="homeLanguage" name="homeLanguage" required />
+
+    <label for="latestResults">Upload Latest Results</label>
+    <input type="file" id="latestResults" name="latestResults" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" />
+
+    <label for="idDocument">Upload ID</label>
+    <input type="file" id="idDocument" name="idDocument" accept=".pdf,.jpg,.jpeg,.png" />
+
+    <h2>Academic Information</h2>
+
+    <label for="program">Program</label>
+    <select id="program" name="program" required>
+      <option value="">-- Select Program --</option>
+    </select>
+
+    <label for="grade">Grade / Level</label>
+    <select id="grade" name="grade" required>
+      <option value="">-- Select Grade / Level --</option>
+    </select>
+
+    <label for="curriculum">Curriculum</label>
+    <select id="curriculum" name="curriculum" required>
+      <option value="">-- Select Curriculum --</option>
+    </select>
+
+    <label for="learningMode">Learning Mode</label>
+    <select id="learningMode" name="learningMode" required>
+      <option value="">-- Select Learning Mode --</option>
+      <option value="Face to Face">Face to Face</option>
+      <option value="Online">Online</option>
+      <option value="Home Tutoring">Home Tutoring</option>
+    </select>
+
+    <label>Subject(s)</label>
+    <div id="subjectsContainer">
+      <div class="subject-input">
+        <select name="subjects[]" required>
+          <option value="">-- Select Subject --</option>
+        </select>
+      </div>
+    </div>
+    <button type="button" class="add-subject-btn" id="addSubjectBtn">+ Add Subject</button>
+
+    <label for="schoolName">Name of School</label>
+    <input type="text" id="schoolName" name="schoolName" required />
+
+    <h2>Next of Kin 1 Details</h2>
+
+    <label for="nextKin1Name">Name</label>
+    <input type="text" id="nextKin1Name" name="nextKin1Name" required />
+
+    <label for="nextKin1Surname">Surname</label>
+    <input type="text" id="nextKin1Surname" name="nextKin1Surname" required />
+
+    <label for="nextKin1PersonalContact">Personal Contact</label>
+    <input type="tel" id="nextKin1PersonalContact" name="nextKin1PersonalContact" pattern="^\+?\d{7,15}$" placeholder="+1234567890" required />
+
+    <label for="nextKin1WorkContact">Work Contact</label>
+    <input type="tel" id="nextKin1WorkContact" name="nextKin1WorkContact" pattern="^\+?\d{7,15}$" placeholder="+1234567890" />
+
+    <label for="nextKin1Email">Email Address</label>
+    <input type="email" id="nextKin1Email" name="nextKin1Email" required />
+
+    <label for="nextKin1PhysicalAddress">Physical Address</label>
+    <textarea id="nextKin1PhysicalAddress" name="nextKin1PhysicalAddress" rows="2" required></textarea>
+
+    <label for="nextKin1RelationToStudent">Relation to Student</label>
+    <input type="text" id="nextKin1RelationToStudent" name="nextKin1RelationToStudent" required />
+
+    <label for="nextKin1Occupation">Occupation</label>
+    <input type="text" id="nextKin1Occupation" name="nextKin1Occupation" required />
+
+    <label for="nextKin1HomeLanguage">Home Language</label>
+    <input type="text" id="nextKin1HomeLanguage" name="nextKin1HomeLanguage" required />
+
+    <button type="button" id="addNextKin2Btn" style="margin-top:1rem;background:#28a745;color:white;border:none;padding:0.5rem 1rem;cursor:pointer;border-radius:4px;">
+      + Add Next of Kin 2
+    </button>
+
+    <div id="nextKin2Section" style="display:none; margin-top:1rem; border-top:1px solid #ccc; padding-top:1rem;">
+      <h2>Next of Kin 2 Details</h2>
+
+      <label for="nextKin2Name">Name</label>
+      <input type="text" id="nextKin2Name" name="nextKin2Name" />
+
+      <label for="nextKin2Surname">Surname</label>
+      <input type="text" id="nextKin2Surname" name="nextKin2Surname" />
+
+      <label for="nextKin2PersonalContact">Personal Contact</label>
+      <input type="tel" id="nextKin2PersonalContact" name="nextKin2PersonalContact" pattern="^\+?\d{7,15}$" placeholder="+1234567890" />
+
+      <label for="nextKin2WorkContact">Work Contact</label>
+      <input type="tel" id="nextKin2WorkContact" name="nextKin2WorkContact" pattern="^\+?\d{7,15}$" placeholder="+1234567890" />
+
+      <label for="nextKin2Email">Email Address</label>
+      <input type="email" id="nextKin2Email" name="nextKin2Email" />
+
+      <label for="nextKin2PhysicalAddress">Physical Address</label>
+      <textarea id="nextKin2PhysicalAddress" name="nextKin2PhysicalAddress" rows="2"></textarea>
+
+      <label for="nextKin2RelationToStudent">Relation to Student</label>
+      <input type="text" id="nextKin2RelationToStudent" name="nextKin2RelationToStudent" />
+
+      <label for="nextKin2Occupation">Occupation</label>
+      <input type="text" id="nextKin2Occupation" name="nextKin2Occupation" />
+
+      <label for="nextKin2HomeLanguage">Home Language</label>
+      <input type="text" id="nextKin2HomeLanguage" name="nextKin2HomeLanguage" />
+    </div>
+
+    <!-- New Referral Source -->
+    <label for="referralSource">Where did you hear about us?</label>
+    <select id="referralSource" name="referralSource" required>
+      <option value="">-- Select an option --</option>
+      <option value="Google">Google</option>
+      <option value="Facebook">Facebook</option>
+      <option value="Friend or Family">Friend or Family</option>
+      <option value="School">School</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <div id="referralOtherContainer" style="display:none; margin-top:0.5rem;">
+      <label for="referralOther">Please specify</label>
+      <input type="text" id="referralOther" name="referralOther" />
+    </div>
+
+    <label for="additionalNotes">Additional Notes</label>
+    <textarea id="additionalNotes" name="additionalNotes" rows="3"></textarea>
+
+    <button type="submit">Submit Registration</button>
+  </form>
+
+  <script>
+    let availableSubjects = []; // Global variable to store subjects
+
+    // Add Subject button logic
+    const addSubjectBtn = document.getElementById('addSubjectBtn');
+    const subjectsContainer = document.getElementById('subjectsContainer');
+
+    // Function to create a new subject select element
+    function createSubjectSelect(subjects) {
+      const newSubjectDiv = document.createElement('div');
+      newSubjectDiv.classList.add('subject-input');
+
+      const newSubjectSelect = document.createElement('select');
+      newSubjectSelect.name = 'subjects[]';
+      newSubjectSelect.required = true;
+
+      const defaultOption = document.createElement('option');
+      defaultOption.value = '';
+      defaultOption.textContent = '-- Select Subject --';
+      newSubjectSelect.appendChild(defaultOption);
+
+      subjects.forEach(subject => {
+        const option = document.createElement('option');
+        option.value = subject;
+        option.textContent = subject;
+        newSubjectSelect.appendChild(option);
+      });
+
+      const removeBtn = document.createElement('button');
+      removeBtn.type = 'button';
+      removeBtn.classList.add('remove-subject-btn');
+      removeBtn.textContent = '×';
+      removeBtn.title = 'Remove this subject';
+      removeBtn.addEventListener('click', () => {
+        newSubjectDiv.remove();
+      });
+
+      newSubjectDiv.appendChild(newSubjectSelect);
+      newSubjectDiv.appendChild(removeBtn);
+      return newSubjectDiv;
+    }
+
+    addSubjectBtn.addEventListener('click', () => {
+      // Use the globally available subjects to create a new select
+      const newSubjectElement = createSubjectSelect(availableSubjects);
+      subjectsContainer.appendChild(newSubjectElement);
+    });
+
+    // Next of Kin 2 toggle logic
+    const addNextKin2Btn = document.getElementById('addNextKin2Btn');
+    const nextKin2Section = document.getElementById('nextKin2Section');
+
+    addNextKin2Btn.addEventListener('click', () => {
+      if (nextKin2Section.style.display === 'none') {
+        nextKin2Section.style.display = 'block';
+        addNextKin2Btn.textContent = '- Remove Next of Kin 2';
+      } else {
+        nextKin2Section.style.display = 'none';
+        addNextKin2Btn.textContent = '+ Add Next of Kin 2';
+        // Clear all inputs in Next of Kin 2 section
+        nextKin2Section.querySelectorAll('input, textarea').forEach(input => input.value = '');
+      }
+    });
+
+    // Referral Source "Other" logic
+    const referralSelect = document.getElementById('referralSource');
+    const referralOtherContainer = document.getElementById('referralOtherContainer');
+    const referralOtherInput = document.getElementById('referralOther');
+
+    referralSelect.addEventListener('change', () => {
+      if (referralSelect.value === 'Other') {
+        referralOtherContainer.style.display = 'block';
+        referralOtherInput.required = true;
+      } else {
+        referralOtherContainer.style.display = 'none';
+        referralOtherInput.value = '';
+        referralOtherInput.required = false;
+      }
+    });
+
+    // Call the function when the DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', fetchAndPopulateAcademicData);
+
+    // Function to fetch data and populate select elements
+    async function fetchAndPopulateAcademicData() {
+      try {
+        const response = await fetch('get_registration_data.php');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        
+        console.log('Fetched data:', data); // Debug log
+
+        // Store subjects globally
+        availableSubjects = data.subjects;
+
+        // Populate Programs
+        const programSelect = document.getElementById('program');
+        data.programs.forEach(program => {
+          const option = document.createElement('option');
+          option.value = program;
+          option.textContent = program;
+          programSelect.appendChild(option);
+        });
+
+        // Populate Grades
+        const gradeSelect = document.getElementById('grade');
+        data.grades.forEach(grade => {
+          const option = document.createElement('option');
+          option.value = grade;
+          option.textContent = grade;
+          gradeSelect.appendChild(option);
+        });
+
+        // Populate Curriculums
+        const curriculumSelect = document.getElementById('curriculum');
+        data.curriculums.forEach(curriculum => {
+          const option = document.createElement('option');
+          option.value = curriculum;
+          option.textContent = curriculum;
+          curriculumSelect.appendChild(option);
+        });
+
+        // Populate the initial Subject select element
+        const initialSubjectSelect = subjectsContainer.querySelector('select[name="subjects[]"]');
+        if (initialSubjectSelect) {
+            availableSubjects.forEach(subject => {
+                const option = document.createElement('option');
+                option.value = subject;
+                option.textContent = subject;
+                initialSubjectSelect.appendChild(option);
+            });
+        }
+
+      } catch (error) {
+        console.error('Error fetching academic data:', error);
+        alert('Failed to load form data. Please check the console for details.');
+      }
+    }
+
+
+  </script>
+
+</body>
+</html>

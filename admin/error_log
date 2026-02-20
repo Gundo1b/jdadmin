@@ -1,0 +1,9 @@
+[24-Jan-2026 20:14:34 UTC] PHP Warning:  Constant BASE_URL already defined in /home/xrgconos/admin.jdtutoring.co.za/config/db.php on line 19
+[24-Jan-2026 20:14:39 UTC] PHP Warning:  Constant BASE_URL already defined in /home/xrgconos/admin.jdtutoring.co.za/config/db.php on line 19
+[24-Jan-2026 20:15:14 UTC] PHP Warning:  Constant BASE_URL already defined in /home/xrgconos/admin.jdtutoring.co.za/config/db.php on line 19
+[24-Jan-2026 20:15:53 UTC] PHP Warning:  Constant BASE_URL already defined in /home/xrgconos/admin.jdtutoring.co.za/config/db.php on line 19
+[18-Feb-2026 10:46:07 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 't.class_id' in 'ON' in /home/xrgconos/admin.jdtutoring.co.za/admin/dashboard.php:107
+Stack trace:
+#0 /home/xrgconos/admin.jdtutoring.co.za/admin/dashboard.php(107): mysqli->query('SELECT t.*, \r\n ...')
+#1 {main}
+  thrown in /home/xrgconos/admin.jdtutoring.co.za/admin/dashboard.php on line 107

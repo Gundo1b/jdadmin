@@ -1,0 +1,16 @@
+[18-Feb-2026 10:35:16 UTC] PHP Warning:  Undefined array key "class_id" in /home/xrgconos/admin.jdtutoring.co.za/admin/timetable/create_timetable.php on line 22
+[18-Feb-2026 10:35:16 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`xrgconos_dash`.`timetable`, CONSTRAINT `fk_timetable_class` FOREIGN KEY (`class_id`) REFERENCES `classes` (`id`) ON DELETE CASCADE) in /home/xrgconos/admin.jdtutoring.co.za/admin/timetable/create_timetable.php:32
+Stack trace:
+#0 /home/xrgconos/admin.jdtutoring.co.za/admin/timetable/create_timetable.php(32): mysqli->query('INSERT INTO tim...')
+#1 {main}
+  thrown in /home/xrgconos/admin.jdtutoring.co.za/admin/timetable/create_timetable.php on line 32
+[18-Feb-2026 10:37:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`xrgconos_dash`.`timetable`, CONSTRAINT `fk_timetable_class` FOREIGN KEY (`class_id`) REFERENCES `classes` (`id`) ON DELETE CASCADE) in /home/xrgconos/admin.jdtutoring.co.za/admin/timetable/create_timetable.php:25
+Stack trace:
+#0 /home/xrgconos/admin.jdtutoring.co.za/admin/timetable/create_timetable.php(25): mysqli->query('INSERT INTO tim...')
+#1 {main}
+  thrown in /home/xrgconos/admin.jdtutoring.co.za/admin/timetable/create_timetable.php on line 25
+[18-Feb-2026 10:43:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 't.class_id' in 'ON' in /home/xrgconos/admin.jdtutoring.co.za/admin/timetable/view_timetable.php:56
+Stack trace:
+#0 /home/xrgconos/admin.jdtutoring.co.za/admin/timetable/view_timetable.php(56): mysqli->query('\r\n    SELECT t....')
+#1 {main}
+  thrown in /home/xrgconos/admin.jdtutoring.co.za/admin/timetable/view_timetable.php on line 56

@@ -1,0 +1,52 @@
+[24-Jan-2026 20:01:45 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/xrgconos/admin.jdtutoring.co.za/config/db.php:18
+Stack trace:
+#0 /home/xrgconos/admin.jdtutoring.co.za/config/db.php(18): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'school_db')
+#1 /home/xrgconos/admin.jdtutoring.co.za/index.php(1): require_once('/home/xrgconos/...')
+#2 {main}
+  thrown in /home/xrgconos/admin.jdtutoring.co.za/config/db.php on line 18
+[24-Jan-2026 20:02:58 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/xrgconos/admin.jdtutoring.co.za/config/db.php:18
+Stack trace:
+#0 /home/xrgconos/admin.jdtutoring.co.za/config/db.php(18): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'school_db')
+#1 /home/xrgconos/admin.jdtutoring.co.za/index.php(1): require_once('/home/xrgconos/...')
+#2 {main}
+  thrown in /home/xrgconos/admin.jdtutoring.co.za/config/db.php on line 18
+[24-Jan-2026 20:03:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/xrgconos/admin.jdtutoring.co.za/config/db.php:18
+Stack trace:
+#0 /home/xrgconos/admin.jdtutoring.co.za/config/db.php(18): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'school_db')
+#1 /home/xrgconos/admin.jdtutoring.co.za/index.php(1): require_once('/home/xrgconos/...')
+#2 {main}
+  thrown in /home/xrgconos/admin.jdtutoring.co.za/config/db.php on line 18
+[24-Jan-2026 20:05:09 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "BASE_URL" in /home/xrgconos/admin.jdtutoring.co.za/index.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/xrgconos/admin.jdtutoring.co.za/index.php on line 3
+[24-Jan-2026 20:05:17 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "BASE_URL" in /home/xrgconos/admin.jdtutoring.co.za/index.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/xrgconos/admin.jdtutoring.co.za/index.php on line 3
+[24-Jan-2026 20:05:22 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "BASE_URL" in /home/xrgconos/admin.jdtutoring.co.za/index.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/xrgconos/admin.jdtutoring.co.za/index.php on line 3
+[24-Jan-2026 20:07:27 UTC] PHP Warning:  require_once(/home/xrgconos/admin.jdtutoring.co.za/config.php): Failed to open stream: No such file or directory in /home/xrgconos/admin.jdtutoring.co.za/index.php on line 3
+[24-Jan-2026 20:07:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/xrgconos/admin.jdtutoring.co.za/config.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/xrgconos/admin.jdtutoring.co.za/index.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/xrgconos/admin.jdtutoring.co.za/index.php on line 3
+[24-Jan-2026 20:08:45 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/xrgconos/admin.jdtutoring.co.za/config/db.php:18
+Stack trace:
+#0 /home/xrgconos/admin.jdtutoring.co.za/config/db.php(18): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'school_db')
+#1 /home/xrgconos/admin.jdtutoring.co.za/index.php(1): require_once('/home/xrgconos/...')
+#2 {main}
+  thrown in /home/xrgconos/admin.jdtutoring.co.za/config/db.php on line 18
+[24-Jan-2026 20:13:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/xrgconos/admin.jdtutoring.co.za/config/db.php:18
+Stack trace:
+#0 /home/xrgconos/admin.jdtutoring.co.za/config/db.php(18): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'school_db')
+#1 /home/xrgconos/admin.jdtutoring.co.za/index.php(7): require_once('/home/xrgconos/...')
+#2 {main}
+  thrown in /home/xrgconos/admin.jdtutoring.co.za/config/db.php on line 18
+[24-Jan-2026 20:14:28 UTC] PHP Warning:  Constant BASE_URL already defined in /home/xrgconos/admin.jdtutoring.co.za/config/db.php on line 19
+[24-Jan-2026 20:15:07 UTC] PHP Warning:  Constant BASE_URL already defined in /home/xrgconos/admin.jdtutoring.co.za/config/db.php on line 19
+[24-Jan-2026 20:15:41 UTC] PHP Warning:  Constant BASE_URL already defined in /home/xrgconos/admin.jdtutoring.co.za/config/db.php on line 19
+[24-Jan-2026 20:15:46 UTC] PHP Warning:  Constant BASE_URL already defined in /home/xrgconos/admin.jdtutoring.co.za/config/db.php on line 19
+[24-Jan-2026 20:16:54 UTC] PHP Parse error:  Unmatched '}' in /home/xrgconos/admin.jdtutoring.co.za/config/db.php on line 20
